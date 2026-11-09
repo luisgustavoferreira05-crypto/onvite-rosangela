@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Rosangela - 50 anos</title>
+<meta name="description" content="Venha comemorar meu aniversário! Dia 13/12, às 12h00, no Salão de festas 1 do Condomínio Villagio de Venezia.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="🎉 Festa de 50 anos da Rosangela 🎉">
+<meta property="og:description" content="Venha comemorar meu aniversário! Dia 13/12, às 12h00, no Salão de festas 1 do Condomínio Villagio de Venezia.">
+<meta property="og:locale" content="pt_BR">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="🎉 Festa de 50 anos da Rosangela 🎉">
+<meta name="twitter:description" content="Venha comemorar meu aniversário! Dia 13/12, às 12h00, no Salão de festas 1 do Condomínio Villagio de Venezia.">
+<!-- Para aparecer a imagem na prévia, adicione: <meta property="og:image" content="LINK_PUBLICO_DA_IMAGEM"> -->
+<!-- Para o WhatsApp mostrar a prévia, o arquivo precisa estar hospedado em um endereço público (https://...) -->
+
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;600;700&family=Cormorant+Garamond:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --azul-noite: #0f2a44;
+    --azul-medio: #2b5a86;
+    --creme: #faf8f3;
+    --dourado: #c9a24a;
+    --dourado-claro: #e8cf8a;
+    --texto: #1c3550;
+  }
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    color: var(--texto);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px 14px;
+    padding-top: env(safe-area-inset-top, 24px);
+    padding-bottom: env(safe-area-inset-bottom, 24px);
+    background:
+      radial-gradient(circle at 50% 0%, #2b5a86 0%, transparent 60%),
+      linear-gradient(180deg, #0f2a44 0%, #173b5f 100%);
+    overflow-x: hidden;
+  }
+
+  .brilho {
+    position: fixed;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: var(--dourado-claro);
+    box-shadow: 0 0 8px var(--dourado-claro);
+    opacity: 0;
+    animation: cintila 5s ease-in-out infinite;
+    pointer-events: none;
+  }
+  @keyframes cintila {
+    0%, 100% { opacity: 0; transform: scale(0.6); }
+    50% { opacity: 0.9; transform: scale(1.2); }
+  }
+
+  .convite {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 420px;
+    background: var(--creme);
+    border-radius: 6px;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+    text-align: center;
+    animation: entra 1s ease both;
+  }
+  @keyframes entra {
+    from { opacity: 0; transform: translateY(24px); }
+    to { opacity: 1; transform: none; }
+  }
+
+  .convite::before {
+    content: "";
+    position: absolute;
+    inset: 12px;
+    border: 1px solid var(--dourado);
+    border-radius: 3px;
+    pointer-events: none;
+    z-index: 2;
+  }
+
+  .topo {
+    position: relative;
+    padding: 40px 28px 26px;
+    background:
+      radial-gradient(circle at 50% 35%, #2b5a86 0%, #173b5f 60%, #0f2a44 100%);
+    color: var(--creme);
+  }
+
+  .flor {
+    position: absolute;
+    width: 110px;
+    height: 110px;
+    pointer-events: none;
+    filter: drop-shadow(0 5px 6px rgba(0, 0, 0, 0.4));
+  }
+  .flor.sup-esq { top: -24px; left: -26px; }
+  .flor.sup-dir { top: -24px; right: -26px; transform: scaleX(-1); }
+  .flor.inf-esq { bottom: -28px; left: -26px; transform: scaleY(-1); }
+  .flor.inf-dir { bottom: -28px; right: -26px; transform: scale(-1, -1); }
+
+  .selo {
+    display: inline-block;
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--dourado-claro);
+    border-top: 1px solid var(--dourado);
+    border-bottom: 1px solid var(--dourado);
+    padding: 6px 14px;
+  }
+
+  .cinquenta {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 104px;
+    font-weight: 700;
+    line-height: 1;
+    margin: 12px 0 0;
+    background: linear-gradient(135deg, #8a6a24, #f1dca0 40%, #c9a24a 60%, #8a6a24);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.35));
+  }
+  .anos {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 15px;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+    color: var(--dourado-claro);
+    margin: -2px 0 0;
+  }
+
+  .convidado {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 13px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--dourado-claro);
+    margin: 22px 0 0;
+  }
+  .nome {
+    font-family: 'Great Vibes', cursive;
+    font-size: 70px;
+    line-height: 1.1;
+    color: var(--creme);
+    margin: 0;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  }
+
+  .faixa-flores {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 16px 0 4px;
+    background: var(--creme);
+  }
+  .faixa-flores::before, .faixa-flores::after {
+    content: "";
+    width: 70px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--dourado));
+  }
+  .faixa-flores::after {
+    background: linear-gradient(90deg, var(--dourado), transparent);
+  }
+  .faixa-flores svg { width: 56px; height: 56px; filter: drop-shadow(0 3px 4px rgba(15, 42, 68, 0.3)); }
+
+  .corpo { padding: 10px 32px 38px; }
+
+  .chamada {
+    font-family: 'Great Vibes', cursive;
+    font-size: 42px;
+    color: var(--azul-medio);
+    line-height: 1.2;
+    margin: 4px 0 10px;
+  }
+
+  .texto-intro {
+    font-size: 18px;
+    line-height: 1.55;
+    color: var(--texto);
+    margin: 0 0 24px;
+  }
+
+  .info { margin-bottom: 28px; }
+  .info-linha {
+    padding: 10px 0;
+    font-size: 17px;
+    line-height: 1.4;
+    border-bottom: 1px solid rgba(201, 162, 74, 0.35);
+  }
+  .info-linha:last-child { border-bottom: none; }
+  .info-linha small {
+    display: block;
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--dourado);
+    margin-bottom: 2px;
+  }
+  .info-linha b {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-weight: 600;
+    font-size: 19px;
+    color: var(--azul-noite);
+  }
+
+  .botao {
+    display: block;
+    width: 100%;
+    padding: 17px 18px;
+    background: linear-gradient(135deg, #0f2a44, #2b5a86);
+    color: var(--dourado-claro);
+    text-decoration: none;
+    font-family: 'Playfair Display', Georgia, serif;
+    font-weight: 600;
+    font-size: 15px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    border: 1px solid var(--dourado);
+    box-shadow: 0 10px 22px rgba(15, 42, 68, 0.35);
+    transition: transform .2s ease, box-shadow .2s ease;
+  }
+  .botao:hover { box-shadow: 0 12px 28px rgba(201, 162, 74, 0.35); }
+  .botao:active { transform: scale(0.98); }
+
+  .borboleta {
+    position: absolute;
+    z-index: 3;
+    width: 52px;
+    height: 38px;
+    pointer-events: none;
+    filter: drop-shadow(0 4px 5px rgba(15, 42, 68, 0.35));
+    animation: voa 6s ease-in-out infinite;
+  }
+  .borboleta.b1 { top: 150px; right: 14px; width: 64px; height: 47px; }
+  .borboleta.b2 { top: 58px; left: 16px; width: 44px; height: 32px; transform: rotate(-12deg); animation-delay: 1.5s; }
+  .borboleta.b3 { top: 56%; left: 12px; width: 50px; height: 37px; transform: rotate(10deg); animation-delay: 3s; }
+  .borboleta.b4 { bottom: 110px; right: 18px; width: 40px; height: 29px; transform: rotate(-8deg); animation-delay: 4.5s; }
+  @keyframes voa {
+    0%, 100% { translate: 0 0; }
+    50% { translate: 6px -10px; }
+  }
+
+  .rodape {
+    margin: 16px 0 0;
+    font-size: 15px;
+    font-style: italic;
+    color: var(--dourado);
+  }
+</style>
+</head>
+<body>
+
+<span class="brilho" style="left:8%;  top:12%; animation-delay:0s;"></span>
+<span class="brilho" style="left:88%; top:20%; animation-delay:1.5s;"></span>
+<span class="brilho" style="left:15%; top:70%; animation-delay:2.8s;"></span>
+<span class="brilho" style="left:82%; top:78%; animation-delay:0.8s;"></span>
+<span class="brilho" style="left:50%; top:90%; animation-delay:3.6s;"></span>
+<span class="brilho" style="left:92%; top:45%; animation-delay:4.2s;"></span>
+
+<!-- Desenhos reutilizáveis: flores, folhas e borboletas com degradês, nervuras e sombreado -->
+<svg width="0" height="0" style="position:absolute">
+  <defs>
+    <!-- Degradês das pétalas: mais escuras na base, mais claras e luminosas na ponta -->
+    <radialGradient id="petala-ext" cx="50%" cy="100%" r="100%">
+      <stop offset="0%" stop-color="#0f2a44"/>
+      <stop offset="40%" stop-color="#1f4f7d"/>
+      <stop offset="75%" stop-color="#4f87bf"/>
+      <stop offset="100%" stop-color="#bcd9f2"/>
+    </radialGradient>
+    <radialGradient id="petala-med" cx="50%" cy="100%" r="100%">
+      <stop offset="0%" stop-color="#173b5f"/>
+      <stop offset="50%" stop-color="#3f73a8"/>
+      <stop offset="100%" stop-color="#9ec5ea"/>
+    </radialGradient>
+    <radialGradient id="petala-int" cx="50%" cy="100%" r="100%">
+      <stop offset="0%" stop-color="#2b5a86"/>
+      <stop offset="60%" stop-color="#6fa3d6"/>
+      <stop offset="100%" stop-color="#e3f0fb"/>
+    </radialGradient>
+    <linearGradient id="folha-grad" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0%" stop-color="#0b2a3a"/>
+      <stop offset="55%" stop-color="#1d5566"/>
+      <stop offset="100%" stop-color="#6aa3a0"/>
+    </linearGradient>
+    <radialGradient id="centro-grad" cx="40%" cy="35%" r="65%">
+      <stop offset="0%" stop-color="#fff6d6"/>
+      <stop offset="45%" stop-color="#e8cf8a"/>
+      <stop offset="100%" stop-color="#8f6c24"/>
+    </radialGradient>
+    <radialGradient id="asa-grad" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#e6f3fd"/>
+      <stop offset="35%" stop-color="#7fb2de"/>
+      <stop offset="75%" stop-color="#2b5a86"/>
+      <stop offset="100%" stop-color="#0f2a44"/>
+    </radialGradient>
+
+    <!-- Pétala externa: formato arredondado, com nervuras e leve dobra -->
+    <g id="petala">
+      <path d="M0 0 C-10 -6 -18 -20 -15 -34 C-12 -44 -4 -48 0 -46 C4 -48 12 -44 15 -34 C18 -20 10 -6 0 0 Z"
+            fill="url(#petala-ext)" stroke="#e8cf8a" stroke-width="0.6" stroke-opacity="0.75"/>
+      <path d="M0 -4 C-4 -16 -3 -30 0 -40" fill="none" stroke="#e3f0fb" stroke-width="0.7" opacity="0.5"/>
+      <path d="M-5 -18 C-8 -26 -8 -34 -6 -40 M5 -18 C8 -26 8 -34 6 -40" fill="none" stroke="#e3f0fb" stroke-width="0.4" opacity="0.3"/>
+      <path d="M-6 -36 C-3 -40 3 -40 6 -36" fill="none" stroke="#ffffff" stroke-width="0.9" opacity="0.35"/>
+    </g>
+
+    <!-- Pétala do anel do meio -->
+    <g id="petala-meio">
+      <path d="M0 0 C-9 -5 -14 -16 -12 -26 C-10 -33 -4 -36 0 -35 C4 -36 10 -33 12 -26 C14 -16 9 -5 0 0 Z"
+            fill="url(#petala-med)" stroke="#e8cf8a" stroke-width="0.5" stroke-opacity="0.7"/>
+      <path d="M0 -3 C-3 -12 -2 -22 0 -30" fill="none" stroke="#e3f0fb" stroke-width="0.6" opacity="0.45"/>
+    </g>
+
+    <!-- Pétala interna: pequena e mais clara -->
+    <g id="petala-interna">
+      <path d="M0 0 C-7 -4 -10 -12 -8 -19 C-6 -24 -2 -25 0 -24 C2 -25 6 -24 8 -19 C10 -12 7 -4 0 0 Z"
+            fill="url(#petala-int)" stroke="#e8cf8a" stroke-width="0.5" stroke-opacity="0.6"/>
+    </g>
+
+    <!-- Folha com borda serrilhada, nervura central e nervuras laterais -->
+    <g id="folha">
+      <path d="M0 0 C7 -4 12 -14 8 -26 C6 -31 3 -34 0 -48 C-3 -34 -6 -31 -8 -26 C-12 -14 -7 -4 0 0 Z"
+            fill="url(#folha-grad)" stroke="#c9a24a" stroke-width="0.5" stroke-opacity="0.8"/>
+      <path d="M0 -2 L0 -42" stroke="#e8cf8a" stroke-width="0.6" opacity="0.8" fill="none"/>
+      <path d="M0 -12 L-6 -18 M0 -12 L6 -18 M0 -22 L-5 -28 M0 -22 L5 -28 M0 -32 L-3 -37 M0 -32 L3 -37"
+            stroke="#e8cf8a" stroke-width="0.35" opacity="0.55" fill="none"/>
+    </g>
+
+    <!-- Flor completa: folhas atrás, três anéis de pétalas, centro dourado com estames -->
+    <g id="flor-desenho">
+      <!-- folhas -->
+      <use href="#folha" transform="translate(50 50) rotate(140) scale(0.95)"/>
+      <use href="#folha" transform="translate(50 50) rotate(220) scale(0.95)"/>
+      <use href="#folha" transform="translate(50 50) rotate(-35) scale(0.7)"/>
+
+      <!-- anel externo -->
+      <use href="#petala" transform="translate(50 50) rotate(0)"/>
+      <use href="#petala" transform="translate(50 50) rotate(45)"/>
+      <use href="#petala" transform="translate(50 50) rotate(90)"/>
+      <use href="#petala" transform="translate(50 50) rotate(135)"/>
+      <use href="#petala" transform="translate(50 50) rotate(180)"/>
+      <use href="#petala" transform="translate(50 50) rotate(225)"/>
+      <use href="#petala" transform="translate(50 50) rotate(270)"/>
+      <use href="#petala" transform="translate(50 50) rotate(315)"/>
+
+      <!-- anel do meio, deslocado -->
+      <use href="#petala-meio" transform="translate(50 50) rotate(22)"/>
+      <use href="#petala-meio" transform="translate(50 50) rotate(67)"/>
+      <use href="#petala-meio" transform="translate(50 50) rotate(112)"/>
+      <use href="#petala-meio" transform="translate(50 50) rotate(157)"/>
+      <use href="#petala-meio" transform="translate(50 50) rotate(202)"/>
+      <use href="#petala-meio" transform="translate(50 50) rotate(247)"/>
+      <use href="#petala-meio" transform="translate(50 50) rotate(292)"/>
+      <use href="#petala-meio" transform="translate(50 50) rotate(337)"/>
+
+      <!-- anel interno -->
+      <use href="#petala-interna" transform="translate(50 50) rotate(10)"/>
+      <use href="#petala-interna" transform="translate(50 50) rotate(70)"/>
+      <use href="#petala-interna" transform="translate(50 50) rotate(130)"/>
+      <use href="#petala-interna" transform="translate(50 50) rotate(190)"/>
+      <use href="#petala-interna" transform="translate(50 50) rotate(250)"/>
+      <use href="#petala-interna" transform="translate(50 50) rotate(310)"/>
+
+      <!-- centro com estames -->
+      <g stroke="#c9a24a" stroke-width="0.5" opacity="0.9">
+        <path d="M50 50 L50 40"/><path d="M50 50 L58 44"/><path d="M50 50 L59 52"/>
+        <path d="M50 50 L54 60"/><path d="M50 50 L46 60"/><path d="M50 50 L41 52"/><path d="M50 50 L42 44"/>
+      </g>
+      <g fill="#c9a24a">
+        <circle cx="50" cy="40" r="1.2"/><circle cx="58" cy="44" r="1.2"/><circle cx="59" cy="52" r="1.2"/>
+        <circle cx="54" cy="60" r="1.2"/><circle cx="46" cy="60" r="1.2"/><circle cx="41" cy="52" r="1.2"/><circle cx="42" cy="44" r="1.2"/>
+      </g>
+      <circle cx="50" cy="50" r="10" fill="url(#centro-grad)" stroke="#8f6c24" stroke-width="0.5"/>
+      <circle cx="50" cy="50" r="3" fill="#fff6d6" opacity="0.9"/>
+    </g>
+
+    <!-- Asa anterior (lado esquerdo): formato triangular com manchas tipo olho -->
+    <g id="asa-ant">
+      <path d="M29 19 C22 8 12 2 5 4 C0 6 1 13 4 18 C8 23 18 25 29 21 Z"
+            fill="url(#asa-grad)" stroke="#e8cf8a" stroke-width="0.7"/>
+      <path d="M28 20 C20 16 12 10 6 8" fill="none" stroke="#0f2a44" stroke-width="0.4" opacity="0.5"/>
+      <path d="M28 20 C20 18 12 16 7 15" fill="none" stroke="#0f2a44" stroke-width="0.4" opacity="0.5"/>
+      <circle cx="12" cy="13" r="3.2" fill="#0f2a44" stroke="#e8cf8a" stroke-width="0.7"/>
+      <circle cx="12" cy="13" r="1.4" fill="#e8cf8a"/>
+    </g>
+
+    <!-- Asa posterior (lado esquerdo): mais arredondada, com faixa dourada na borda -->
+    <g id="asa-post">
+      <path d="M29 23 C23 27 15 27 11 32 C8 36 11 40 16 39 C21 38 26 33 29 27 Z"
+            fill="url(#asa-grad)" stroke="#e8cf8a" stroke-width="0.7"/>
+      <path d="M15 35 C13 37 12 39 14 40" fill="none" stroke="#e8cf8a" stroke-width="0.8" opacity="0.8"/>
+      <circle cx="16" cy="33" r="1.6" fill="#e8cf8a"/>
+    </g>
+
+    <!-- Borboleta completa: asas espelhadas, corpo segmentado e antenas com ponta -->
+    <g id="borboleta-desenho">
+      <use href="#asa-post"/>
+      <use href="#asa-ant"/>
+      <use href="#asa-post" transform="translate(60 0) scale(-1 1)"/>
+      <use href="#asa-ant" transform="translate(60 0) scale(-1 1)"/>
+      <ellipse cx="30" cy="22" rx="1.9" ry="9.5" fill="#0f2a44"/>
+      <g fill="#c9a24a" opacity="0.9">
+        <rect x="29.2" y="17" width="1.6" height="1"/>
+        <rect x="29.2" y="21" width="1.6" height="1"/>
+        <rect x="29.2" y="25" width="1.6" height="1"/>
+      </g>
+      <circle cx="30" cy="12.5" r="1.8" fill="#0f2a44"/>
+      <path d="M29.5 11 C27 6 24 5 21 4 M30.5 11 C33 6 36 5 39 4" fill="none" stroke="#c9a24a" stroke-width="0.6" stroke-linecap="round"/>
+      <circle cx="21" cy="4" r="0.9" fill="#e8cf8a"/>
+      <circle cx="39" cy="4" r="0.9" fill="#e8cf8a"/>
+    </g>
+  </defs>
+</svg>
+
+<main class="convite">
+
+  <svg class="borboleta b1" viewBox="0 0 60 44"><use href="#borboleta-desenho"/></svg>
+  <svg class="borboleta b2" viewBox="0 0 60 44"><use href="#borboleta-desenho"/></svg>
+  <svg class="borboleta b3" viewBox="0 0 60 44"><use href="#borboleta-desenho"/></svg>
+  <svg class="borboleta b4" viewBox="0 0 60 44"><use href="#borboleta-desenho"/></svg>
+
+  <section class="topo">
+    <svg class="flor sup-esq" viewBox="0 0 100 100"><use href="#flor-desenho"/></svg>
+    <svg class="flor sup-dir" viewBox="0 0 100 100"><use href="#flor-desenho"/></svg>
+    <svg class="flor inf-esq" viewBox="0 0 100 100"><use href="#flor-desenho"/></svg>
+    <svg class="flor inf-dir" viewBox="0 0 100 100"><use href="#flor-desenho"/></svg>
+
+    <span class="selo">Convite especial</span>
+
+    <p class="cinquenta">50</p>
+    <p class="anos">anos</p>
+
+    <p class="convidado">Celebrando</p>
+    <h1 class="nome">Rosangela</h1>
+  </section>
+
+  <div class="faixa-flores">
+    <svg viewBox="0 0 100 100"><use href="#flor-desenho"/></svg>
+  </div>
+
+  <section class="corpo">
+    <p class="chamada">Venha comemorar meu aniversário!</p>
+    <p class="texto-intro">
+      Cinquenta anos de histórias, conquistas e muito amor! Quero dividir esse dia com as pessoas
+      que fazem parte da minha vida. Traga seu sorriso, venha brindar comigo e celebrar mais esta fase.
+    </p>
+
+    <div class="info">
+      <div class="info-linha">
+        <small>Data</small>
+        <b>13 de dezembro</b>
+      </div>
+      <div class="info-linha">
+        <small>Horário</small>
+        <b>12h00</b>
+      </div>
+      <div class="info-linha">
+        <small>Local</small>
+        <b>Salão de festas 1</b><br>
+        Condomínio Villagio de Venezia · Central Park<br>
+        Av. Obedy Candido Vieira, 801
+      </div>
+    </div>
+
+    <a id="btn-confirmar" class="botao" href="#" target="_blank" rel="noopener">Confirmar presença</a>
+
+    <p class="rodape">Sua presença é o melhor presente que eu poderia ganhar.</p>
+  </section>
+
+</main>
+
+<script>
+  // Número de WhatsApp que recebe as confirmações (DDI + DDD + número).
+  const NUMERO_WHATSAPP = "5551986365772";
+
+  const mensagem = "ESTOU MUITO FELIZ COM O SEU CONVITE, PODE CONTAR COMIGO QUE EU VOU IR COMEMORAR CONTIGO";
+
+  const base = NUMERO_WHATSAPP ? `https://wa.me/${NUMERO_WHATSAPP}` : "https://wa.me/";
+  document.getElementById("btn-confirmar").href = `${base}?text=${encodeURIComponent(mensagem)}`;
+</script>
+
+</body>
+</html>
